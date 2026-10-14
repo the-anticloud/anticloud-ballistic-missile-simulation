@@ -1,0 +1,9 @@
+# AIOSS ledger v1
+# project: ARTILLERY_MANUFACTURING/BALLISTIC_MISSILE_SIMULATION
+# records: 5
+# head: 3fcb9a7ed73770ebeb19c1da67614b35eb1d27a4bd474185332abc33abf1f54b
+{"digest": "ed21991ebee57d7e246ffd2eac420b08d57f593739dfc5e52b4ba8f2b7d617ad", "kind": "bench-report", "path": "BENCH.json", "payload_sha3": "ef8be49a694f2d4248d468bb3c04da8a57e8700cf5cb2bec4275c072f9f0ad60", "prev": "5a5a9db5fb708ae61804306200e7a9e31853dde596c5f14d2303d4349fe14b2d", "seq": 0, "ts": "2026-10-09T05:52:14Z"}
+{"digest": "b1bbd808edc9b5b811e9e7c0a5227f0c742924222c2f54cf4faed2fac433834c", "kind": "result-register", "path": "ISOLATED_LAB_RESULTS/03_Result_Register.md", "payload_sha3": "2aa95e772b34855bc2d3067e4aee56caf5b28e1cbeb123da7432c658edfa15a9", "prev": "ed21991ebee57d7e246ffd2eac420b08d57f593739dfc5e52b4ba8f2b7d617ad", "seq": 1, "ts": "2026-10-09T05:52:14Z"}
+{"digest": "74586aa3bbd4511e9d727cda2eca46c9ef0d2da3466877bc0a5ed0887177f050", "kind": "readme", "path": "README.md", "payload_sha3": "d4688bde303a5982c564ed143864ba1fa5787556c765a819e371aa502bdf3eef", "prev": "b1bbd808edc9b5b811e9e7c0a5227f0c742924222c2f54cf4faed2fac433834c", "seq": 2, "ts": "2026-10-09T05:52:14Z"}
+{"digest": "b8a1ece5793672aa38b7ef41296b83566c28284ba82d24cea337e49d8d4121d8", "kind": "licence", "path": "ANTICOMMONS_LICENSE.md", "payload_sha3": "7217b6c488f185b6c68b972e7857c9cd19e16933282561624696ca28711205de", "prev": "74586aa3bbd4511e9d727cda2eca46c9ef0d2da3466877bc0a5ed0887177f050", "seq": 3, "ts": "2026-10-09T05:52:14Z"}
+{"digest": "3fcb9a7ed73770ebeb19c1da67614b35eb1d27a4bd474185332abc33abf1f54b", "kind": "notice", "path": "NOTICE", "payload_sha3": "2684f2b1464e400591388afa9d38b2296c779c8739aefefdc1eb3a0ff0ed5623", "prev": "b8a1ece5793672aa38b7ef41296b83566c28284ba82d24cea337e49d8d4121d8", "seq": 4, "ts": "2026-10-09T05:52:14Z"}
