@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:847cb504-78b9-5a9e-bf8d-627c934a40ac",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-12T07:58:12Z",
+    "component": {
+      "type": "application",
+      "name": "BALLISTIC_MISSILE_SIMULATION",
+      "version": "e2ad2faee428",
+      "bom-ref": "pkg:generic/anticloud/BALLISTIC_MISSILE_SIMULATION@e2ad2faee428",
+      "purl": "pkg:generic/anticloud/BALLISTIC_MISSILE_SIMULATION@e2ad2faee428",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "e2ad2faee42809c22141aa7c9c52a6d8faae9f20"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": ""
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}
