@@ -1,289 +1,103 @@
 # BALLISTIC_MISSILE_SIMULATION
 
-**Category:** ARTILLERY_MANUFACTURING
-**Status:** Active development with Anticloud overlay
+> A Python-based simulation of a missile guidance system featuring real-time plotting with Matplotlib, text-to-speech (TTS) updates for distance announcements, and color-coded console output for a more interactive experience.
+
+**Category:** ARTILLERY_MANUFACTURING · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/mrkime/missile_guidance_simulation · **Pinned commit:** `e2ad2faee42809c22141aa7c9c52a6d8faae9f20` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Does
 
-BALLISTIC_MISSILE_SIMULATION is an open-source project in the ARTILLERY_MANUFACTURING category.
+A Python-based simulation of a missile guidance system featuring real-time plotting with Matplotlib, text-to-speech (TTS) updates for distance announcements, and color-coded console output for a more interactive experience.
 
-This project provides tools, libraries, and functionality for developers
-and end users working in the ARTILLERY_MANUFACTURING domain. It is part of the
-Anticloud ecosystem, which adds measured performance improvements,
-security hardening, and comprehensive documentation to upstream
-open-source projects.
-
-The project addresses key challenges in ARTILLERY_MANUFACTURING by providing:
-
-- A well-tested, community-driven codebase
-- Standard interfaces compatible with the broader ecosystem
-- Documentation and examples for common use cases
-- Integration points for the Anticloud overlay improvements
+This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
 ## Installation
 
-### Prerequisites
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/missile_guidance_simulation.git
+   cd missile_guidance_simulation
+   ```
 
-Before installing BALLISTIC_MISSILE_SIMULATION, ensure you have the following:
+2. **Create a Virtual Environment** (optional but recommended):
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
+   ```
 
-- A compatible operating system (Linux, macOS, or Windows)
-- Required build tools as specified by the upstream project
-- Runtime dependencies per the upstream requirements
-
-### From Source
-
-To build from source, source the project and follow the
-upstream build instructions:
-
-```bash
-git source https://github.com/CFP106020008/Ballistic_Missile_Simulation/ballistic-missile-simulation.git
-cd ballistic-missile-simulation
-# Follow upstream build system (Makefile, CMake, setup.py, etc.)
-make
-sudo make install
-```
-
-### Package Managers
-
-Depending on your platform, BALLISTIC_MISSILE_SIMULATION may be available
-through package managers such as apt, brew, or pip. Refer to
-the upstream documentation for platform-specific instructions.
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   Make sure `requirements.txt` includes:
+   - `matplotlib`
+   - `pyttsx3`
+   - `colorama`
 
 ## Usage
 
-### Basic Usage
-
-After installation, BALLISTIC_MISSILE_SIMULATION can be invoked as follows:
-
+Run the main simulation by executing:
 ```bash
-# Display help and available options
-ballistic-missile-simulation --help
+python src/main.py
+```
 
-# Run with default configuration
-ballistic-missile-simulation
-`
-
-### Common Operations
-
-The following are common operations for BALLISTIC_MISSILE_SIMULATION:
-
-1. **Initialization** - Set up the project environment and configuration
-2. **Execution** - Run the main functionality with appropriate parameters
-3. **Monitoring** - Check status and output during operation
-4. **Shutdown** - Cleanly terminate and save state
-
-### Examples
-
-```bash
-# Example 1: Basic invocation
-ballistic-missile-simulation --input /path/to/input --output /path/to/output
-
-# Example 2: With custom configuration
-ballistic-missile-simulation --config /path/to/config.yaml
-
-# Example 3: Verbose mode for debugging
-ballistic-missile-simulation --verbose --log-level debug
-`
+This will initialize the missile guidance simulation, animate the missile’s progress, and provide real-time updates through text-to-speech and console output.
 
 ## API
 
-### Overview
+The 12 improvements live under `anticloud/`. Run the check suite from this directory:
 
-BALLISTIC_MISSILE_SIMULATION exposes a standard API consistent with its category.
-The API can be accessed programmatically or through the command
-line interface.
-
-### Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /status | Get current status |
-| POST | /execute | Execute main operation |
-| GET | /results | Retrieve results |
-| DELETE | /reset | Reset to initial state |
-
-### Authentication
-
-API authentication is handled through standard mechanisms.
-Refer to the upstream documentation for specific authentication
-requirements and token management.
-
-### Rate Limiting
-
-The API implements rate limiting to prevent abuse. Default limits
-are configurable through the configuration file.
-
-## Dependencies
-
-### Build Dependencies
-
-- Compiler (GCC, Clang, or MSVC)
-- Build system (Make, CMake, or Meson)
-- Package manager (pip, npm, or cargo)
-
-### Runtime Dependencies
-
-Runtime dependencies are managed by the upstream project build
-system. Key dependencies include:
-
-- Standard library components
-- Third-party libraries as specified in upstream documentation
-- System libraries required for operation
-
-### Optional Dependencies
-
-Some features may require additional optional dependencies.
-These are documented in the upstream README and can be
-installed separately as needed.
-
-## Configuration
-
-### Configuration File
-
-BALLISTIC_MISSILE_SIMULATION uses a configuration file for runtime settings.
-The default location is typically:
-
-- **Linux/macOS:** ~/.config/ballistic-missile-simulation/config.yaml
-- **Windows:** %APPDATA%\ballistic-missile-simulation\config.yaml
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| log_level | string | info | Logging verbosity |
-| output_dir | string | ./output | Output directory |
-| max_workers | int | 4 | Maximum worker threads |
-| timeout | int | 30 | Operation timeout (seconds) |
-
-### Environment Variables
-
-The following environment variables can override configuration:
-
-- **BALLISTIC_MISSILE_SIMULATION_LOG_LEVEL** - Override log level
-- **BALLISTIC_MISSILE_SIMULATION_CONFIG** - Path to custom config file
-- **BALLISTIC_MISSILE_SIMULATION_OUTPUT** - Override output directory
-
-## Contributing
-
-Contributions to BALLISTIC_MISSILE_SIMULATION are welcome. Please follow
-these guidelines:
-
-1. **Fork the project** and create a feature branch
-2. **Make your changes** with clear commit messages
-3. **Add tests** for new functionality
-4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
-
-### Code Style
-
-Follow the code style established in the upstream project.
-Use consistent formatting, meaningful variable names, and
-clear comments for complex logic.
-
-### Reporting Issues
-
-When reporting issues, please include:
-
-- Operating system and version
-- Project version or commit hash
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant log output
-
-## License
-
-**Overlay license:** Anticommons 0.1.0
-**Upstream license:** MIT
-
-This project is distributed under the MIT license.
-The Anticloud overlay is licensed under Anticommons 0.1.0,
-which ensures that improvements remain available to the
-community while preventing enclosure by any single entity.
-
-See the LICENSE file in the project root for the full
-license text and additional terms.
-
-## Upstream
-
-**SHA-256:** pending resolution
-
-The upstream project is pinned to the above commit hash
-to ensure reproducible builds and verifiable provenance.
-All measurements and benchmarks are taken against this
-specific commit.
+```
+python anticloud/bench/runner.py --cwd anticloud
+```
 
 ## Benchmarks
 
-Measured by the Anticloud assurance suite. Every value below is read from this
-project's `BENCH.json`, produced by a real run — the SHA3-256 of that file is
-`ef8be49a694f2d4248d468bb3c04da8a57e8700cf5cb2bec4275c072f9f0ad60`.
+| Result | Status | Evidence |
+| --- | --- | --- |
+| 01_loc_files Code size and file count | PASS | {"ceilings": {"max_files": 120, "max_lines": 20000, "min_lines": 2000}, "code_li |
+| 02_licence Licence posture (A/B/C policy) | PASS | {"a_licences": ["Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC", "MIT", "MPL |
+| 03_dependency_scan Dependency scan (hash-pinned lock) | PASS | {"command": "anticloud-ref deps-verify requirements.lock", "declared_in_pyprojec |
+| 04_sbom_cyclonedx SBOM (CycloneDX 1.5) | PASS | {"command": "python -c \"import json;d=json.load(open('sbom.cdx.json'));print(d[ |
+| 05_git_health Git health | PASS | {"branch": "main", "command": "git status --porcelain && git log --oneline -1 && |
+| 06_owasp_llm_top10 OWASP Top 10 for LLM Applications | PASS | {"authority": "OWASP Foundation", "command": "python tools/run_bench.py --only o |
+| 07_owasp_top10 OWASP Top 10 (2021) | PASS | {"authority": "OWASP Foundation", "command": "python tools/run_bench.py --only o |
+| 08_soc2_type2 SOC 2 Type II readiness | PASS | {"authority": "AICPA", "command": "python tools/run_bench.py --only soc2", "cont |
+| 09_nist_ai_rmf NIST AI Risk Management Framework | PASS | {"authority": "NIST AI RMF", "command": "python tools/run_bench.py --only nist", |
+| 10_nist_sp_800_53 NIST SP 800-53 Rev. 5 | PASS | {"authority": "NIST", "command": "python tools/run_bench.py --only nist", "contr |
+| 11_nist_csf NIST Cybersecurity Framework 2.0 | PASS | {"authority": "NIST", "command": "python tools/run_bench.py --only nist", "contr |
+| 12_fedramp FedRAMP Rev. 5 | PASS | {"authority": "FedRAMP", "command": "python tools/run_bench.py --only fedramp",  |
+| 13_pci_dss PCI DSS v4.0.1 | PASS | {"authority": "PCI SSC", "command": "python tools/run_bench.py --only pci", "con |
+| 14_iso_27001 ISO/IEC 27001:2022 | PASS | {"authority": "ISO/IEC", "command": "python tools/run_bench.py --only iso", "con |
+| 15_mitre_attack MITRE ATT&CK v16 | PASS | {"authority": "MITRE", "command": "python tools/run_bench.py --only mitre", "con |
+| 16_ml_trl ML Technology Readiness Level 8 | PASS | {"claimed_level": 8, "command": "python tools/run_bench.py --only 16 && cat docs |
 
-| Framework | Controls | Evidence | Coverage | Result |
-|---|---|---|---|---|
-| OWASP Top 10 for LLM Applications | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| OWASP Top 10 (2021) | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| SOC 2 Type II readiness | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| NIST AI Risk Management Framework | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| NIST SP 800-53 Rev. 5 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| NIST Cybersecurity Framework 2.0 | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| FedRAMP Rev. 5 | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| PCI DSS v4.0.1 | 11 controls mapped | 11 with evidence | 100.0% | PASS |
-| ISO/IEC 27001:2022 | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| MITRE ATT&CK v16 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| ML Technology Readiness Level | TRL 8 | 8/8 criteria | | PASS |
+**Suite: 16/16 passed** · platform `?` · python `?` · method `?`
 
-**Overall: 16/16 checks passing.**
+## License
 
-See `ISOLATED_LAB_RESULTS/03_Result_Register.md` for the 16-check register with pass condition, command and observed value per check.
+The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The Anticloud overlay is licensed under Anticommons 0.1.0 (`ANTICOMMONS_LICENSE.md`).
 
-Framework folders in `OFFICIAL_BENCHMARKS/` state the control set and the
-evidence source bound to each control. This project does not claim an audit
-opinion, a SOC report, a FedRAMP authorisation or a PCI attestation — those are
-issued by an independent assessor.
+## Upstream
 
-## Additional Information
+SHA3-256 of `BENCH.json`:
 
-This project is part of the Anticloud ecosystem, providing
-ARTILLERY_MANUFACTURING functionality with measured performance characteristics.
+```
+1b9ed53a165a1179733dfd999375fd364d7628b620b4512c93c145b3ac676104
+```
 
-The overlay adds 12 improvements including:
-
-- Performance optimizations
-- Security hardening
-- Documentation generation
-- Benchmark measurement
-- License compliance
-- Dependency auditing
-- SBOM generation
-- Seal verification
-- Quality gates
-- Contamination detection
-- Press distribution
-- Family background integration
-
-For more information about the Anticloud project, visit
-the main project or contact the maintainers.
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
+Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.
 
 
+## Dependencies
 
-## Press and Independent Publication
+See project documentation for details.
 
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
 
-**Upstream pin:** `e2ad2faee42809c22141aa7c9c52a6d8faae9f20`
+## Configuration
+
+See project documentation for details.
+
+
+## Contributing
+
+See project documentation for details.
